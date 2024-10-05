@@ -1,0 +1,100 @@
+// out: ../css/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+// 顶部导航
+.bg-body-tertiary {
+  background-color: transparent !important;
+  transition: all 0.4s;
+
+  .navbar-brand {
+    display: inline-block;
+    margin-left: 6px;
+    img {
+      height: 40px;
+    }
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+    .nav-item {
+      margin-left: 28px;
+      .nav-link {
+        display: block;
+        padding: 10px 0;
+        position: relative;
+        color: #666;       
+        &:visited {
+          color: #666;
+        }    
+        &:hover {
+          color: #FE9600;   
+        }
+      }
+    }
+  }
+
+  a {
+    color: #ccc;
+  }
+
+  &:hover {
+    background-color: #fff !important;
+  }
+}
+@media(min-width: 992px) { 
+  .navbar-collapse{
+    .nav-link{
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0px;
+        bottom: -11px;
+        width: 0;
+        height: 6px;
+        background-color: #FE9600;
+        transition: all .25s ease-in-out;  
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }  
+      }
+    }
+  }
+}
+
+// 底部
+.footer {
+  // background-color: #666;
+  margin-top: (60 / 16rem);
+  padding: 2%;
+  p {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FE9600;
+}

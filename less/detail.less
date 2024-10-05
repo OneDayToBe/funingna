@@ -1,0 +1,50 @@
+// out: ../css/
+@import './common.less';
+
+.body {
+  background-color: #f0f1f5;
+}
+
+// 标题
+.head-title {
+  position: relative;
+  height: (400 / 16rem);
+  background: url(../images/ys_zrwb.jfif) no-repeat center center / cover;
+  .mark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: (400 / 16rem);
+    background-color: rgba(0, 0, 0, .4);
+  }
+ 
+  .txt {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    max-width: 800px;
+    color: #fff;
+    transform: translateX(-50%);
+
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  
+}
+
+// 内容
+.content-body {
+  padding-top: 40px;
+  min-height: 480px;
+  .render {
+    color: #797979;
+    line-height: 30px;
+  }
+}
+
